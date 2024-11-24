@@ -10,6 +10,14 @@
     font-size: 62.5%;
 }
 
+.coming-soon{
+    text-align: center;
+    padding-top: 150px;
+    font-size: 1.5rem;
+}
+.coming-soon-p {
+    text-align: center;
+}
 .welcome-container {
     padding-top: 84px;
 }
@@ -30,20 +38,29 @@
 .bio {
   margin: 20px auto;
   width: 600px;
+  display: flex;
 }
 .bio::first-line {
   font-weight: bold;
 }
 
 @media screen and (max-width: 414px) {
-  .img {
+  .welcome-container h1 {
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .personal-photo {
     width: 100%;
-    width: 300;
     height: auto;
   }
-
   .bio {
-    width: 414px;
+    width: auto;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .bio::first-line {
+    font-weight: bold;
   }
 }
 
