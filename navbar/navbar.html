@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <script defer src="navbar.js"></script>
-  </head>
-  <body>
-    <main>
-    </main>
-  </body>
-</html>
+<nav class="navbar">
+  <div class="navbar-container container">
+    <input type="checkbox" name="hamburger" id="burger" />
+    <label for="burger" class="hamburger-lines" aria-label="Toggle Menu">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </label>
+    <ul class="menu-items">
+      <li class="index"><a href="index.html" id="home-link">Home</a></li>
+      <li class="projects">
+        <a href="projects/projects.html">Projects</a>
+      </li>
+      <li class="previous-work">
+        <a href="previous-work/previous-work.html">Previous Work</a>
+      </li>
+      <li class="about"><a href="about/about.html">About</a></li>
+      <li class="contact"><a href="contact/contact.html">Contact</a></li>
+    </ul>
+    <h1 class="logo">Chris Sloggett</h1>
+  </div>
+</nav>
