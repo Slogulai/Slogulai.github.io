@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let navbarPath;
 
   if (currentPath.includes('/about') || currentPath.includes('/contact') || currentPath.includes('/projects') || currentPath.includes('/previous-work')) {
-    navbarPath = '/slogulai.github.io/navbar/navbar.html';
+    navbarPath = '../navbar/navbar.html';
   } else {
     navbarPath = 'navbar/navbar.html';
   }
