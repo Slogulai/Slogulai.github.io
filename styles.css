@@ -73,7 +73,7 @@
         display: block;
         margin-top: 64px;
         margin: 0 auto;
-        width: 500px;
+        width: auto;
         height: auto;
         border-radius: 50%
     }
