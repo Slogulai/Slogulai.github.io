@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const homeLink = document.getElementById('home-link');
         const currentPage = window.location.pathname;
 
-        if (currentPage.endsWith('index.html') || currentPage != '/Slogulai.github.io') {
+        if (currentPage.endsWith('index.html') || currentPage === '/') {
           homeLink.style.display = 'none';
         }
       } else {
