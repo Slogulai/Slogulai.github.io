@@ -6,13 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="../styles.css" />
-    <link rel="icon" href="/Slogulai.github.io/assets/Microsoft-Fluentui-Emoji-3d-Water-Wave-3d.svg" type="image/x-icon" />
+    <link rel="icon" href="../assets/Microsoft-Fluentui-Emoji-3d-Water-Wave-3d.svg" type="image/x-icon" />
     <script defer src="../navbar/navbar.js"></script>
     <script defer src="contact.js"></script>
   </head>
   <body>
     <div id="navbar-placeholder"></div>
-    <section class="coming-soon">Coming Soon!</section>
-    <p class="coming-soon-p">now go away</p>
+    <main>
+      <section class="contact-form-container">
+        <form class="contact-form">
+          <h1>Contact Form</h1>
+
+          <div class="required-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" required=""/>
+          </div>
+
+          <div class="required-data">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required=""/>
+          </div>
+
+          <div class="optional-data">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Feel free to ask any questions!"></textarea>
+          </div>
+
+          <fieldset class="have-nice-day">
+            <legend>Did you have a nice day?</legend>
+            <input type="radio" id="yes" name="have-nice-day" value="yes" />
+            <label for="yes">Yes</label>
+
+            <input type="radio" id="no" name="have-nice-day" value="no" />
+            <label for="no">No</label>
+
+          </fieldset>
+          <div class="button-container">
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
