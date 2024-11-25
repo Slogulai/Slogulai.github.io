@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let navbarPath;
 
   if (currentPath.includes('/about') || currentPath.includes('/contact') || currentPath.includes('/projects') || currentPath.includes('/previous-work')) {
-    navbarPath = '../navbar/navbar.html';
+    navbarPath = '/Slogulai.github.io/navbar/navbar.html';
   } else {
     navbarPath = 'navbar/navbar.html';
   }
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const homeLink = document.getElementById('home-link');
         const currentPage = window.location.pathname;
 
-        if (currentPage.endsWith('index.html') || currentPage === '/') {
+        if (currentPage.endsWith('index.html') || currentPage === '/Slogulai.github.io/') {
           homeLink.style.display = 'none';
         }
       } else {
