@@ -21,9 +21,42 @@ body {
   text-align: center;
 }
 
-
-
-
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 20px;
+  padding: 20px;
+  padding-top: 94px;
+  box-sizing: border-box;
+  max-width: 800px;
+  align-items: center;
+  margin: 0 auto;
+}
+.resume-container li {
+  padding-left: 20px;
+}
+.resume-container strong {
+  font-weight: bold;
+}
+.header {
+  grid-row: 1;
+}
+.summary {
+  grid-row: 2;
+}
+.experience-section {
+  grid-row: 3;
+}
+.education-section {
+  grid-row: 4;
+}
+.skills-section {
+  grid-row: 5;
+}
+.extraciriclar-section {
+  grid-row: 6;
+}
 
 /* About.html */
 .image-container {
