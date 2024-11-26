@@ -8,3 +8,6 @@ https://www.scaler.com/topics/javascript-hide-element/
 
 Favicon source
 https://www.iconarchive.com/show/fluentui-emoji-3d-icons-by-microsoft/Water-Wave-3d-icon.html
+
+responsive image grid that I used as a source
+https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp
