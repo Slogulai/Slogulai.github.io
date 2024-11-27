@@ -150,14 +150,16 @@ body {
   padding: 0 4px;
 }
 .column {
-  flex: 25%;
+  flex:1 1 20%;
   max-width: 25%;
   padding: 0 4px;
+  box-sizing: border-box;
 }
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  height: auto;
 }
 .single-image {
   margin: 20px;
