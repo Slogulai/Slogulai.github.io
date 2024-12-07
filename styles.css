@@ -290,17 +290,19 @@ body {
 .optional-data {
   margin-top: 5%;
 }
+.optional-data legend {
+  display: none;
+}
 
 .have-nice-day {
   display: flex;
+  flex-direction: wrap;
+  justify-content: space-between;
   padding: 10px;
 }
 .have-nice-day legend {
   padding-top: 30px;
   font-size: 1.5rem;
-}
-.have-nice-day input[id="no"] {
-  margin-left: 10px;
 }
 .have-nice-day input[type="radio"] {
   appearance: none;
@@ -334,8 +336,8 @@ body {
   justify-content: space-between;
   margin-top: auto;
 }
-.button-container input[type="submit"],
-.button-container input[type="reset"] {
+.button-container button[type="submit"],
+.button-container button[type="reset"] {
   width: 49%;
   padding: 10px 20px;
   font-size: 16px;
@@ -344,19 +346,19 @@ body {
   margin-top: 10px;
   position: relative;
 }
-.button-container input[type="submit"] {
+.button-container button[type="submit"] {
   background-color: black;
   color: white;
 }
-.button-container input[type="submit"]:hover {
+.button-container button[type="submit"]:hover {
+  background-color: blue;
+  color: white;
+}
+.button-container button[type="reset"] {
   background-color: white;
   color: black;
 }
-.button-container input[type="reset"] {
-  background-color: white;
-  color: black;
-}
-.button-container input[type="reset"]:hover {
+.button-container button[type="reset"]:hover {
   background-color: gray;
 }
 
