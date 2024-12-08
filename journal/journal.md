@@ -11,3 +11,9 @@ https://www.iconarchive.com/show/fluentui-emoji-3d-icons-by-microsoft/Water-Wave
 
 responsive image grid that I used as a source
 https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp
+
+rustacean image source
+https://rustacean.net/more-crabby-things/rustdocs.png
+
+github logo
+https://github.com/logos
