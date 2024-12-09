@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <link rel="icon" href="../assets/Microsoft-Fluentui-Emoji-3d-Water-Wave-3d.svg" type="image/x-icon" />
+    <script defer src="../navbar/navbar.js"></script>
+    <script defer src="projects.js"></script>
+  </head>
+  <body>
+    <nav id="navbar-placeholder" aria-label="Main navigation"></nav>
+    <main>
+      <header>
+        <h1>Current and Past Projects!</h1>
+      </header>
+      <article class="ai-research-project" >
+        <header>
+          <h2>AI Research Project</h2>
+        </header>
+        <p>This project is a collective effort between two other students and I. The premise of the project is a cat and mouse game, where one agent is chasing the other. The agent that is running away takes advantage of the A* search algorithm to run away, while the chasing agent is learning using Reinforcement Learning through a q table on how to catch the A* agent. The program runs through 1000 episode through 5 different boards with an animation every 50 episodes to illustrate how the reinforcment learning agent does over the 1000 episode trial. My contribution to the project was the integration of the maze environment with the OpenAIGym framework and the implementation of the QLearning RL Class. The image of the human and zombie is a frame from when the program runs.</p>
+        <img src="../assets/zombie-human-aiproject.jpg" alt="An image of the AI research project running" />
+        <p>Github: <a href="https://github.com/JPatts/AI-Research-Project">
+          <img src="../assets/github-mark.png" alt="Github Logo" class="github-icon"/>
+          AI Research Project</a> </p>
+      </article>
+
+      <article class="rust-web-server">
+        <header>
+          <h2>Rust Web Server</h2>
+        </header>
+        <p>This project was my first forray into web development, and boy was it a tough one! The project was to build a web server exclusively in Rust. Given Rust's memory safe features, this is an excellent language for a web server and there are a number of frameworks to pick from. Axum was the framework of choice on this web server. The project involved using a docker container to store a sql database and serve that data to a web page. My understanding of HTML at the time of the submission was not vast, so the html ended up being very basic while I focused more on the back end throughout the project. This will be a project that I will update in the near future given my new knowledge of web development!</p>
+        <img src="../assets/rustacean.png" alt="An image of the Rustacean" />
+        <p>Github: <a href="https://github.com/Slogulai/CS410P_RUST">
+          <img src="../assets/github-mark.png" alt="Github Logo" class="github-icon"/>
+          Rust Web Server</a> 
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

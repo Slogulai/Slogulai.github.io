@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <link
+      rel="icon"
+      href="../assets/Microsoft-Fluentui-Emoji-3d-Water-Wave-3d.svg"
+      type="image/x-icon"
+    />
+    <script defer src="../navbar/navbar.js"></script>
+    <script defer src="contact.js"></script>
+  </head>
+  <body>
+    <nav id="navbar-placeholder" aria-label="Main navigation"></nav>
+    <main>
+      <section class="contact-form-container">
+        <form
+          class="contact-form"
+          action="https://usebasin.com/f/33ed49520bc7"
+          method="POST"
+          aria-label="Contact form"
+        >
+          <h1>Contact Form</h1>
+
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="required-data">
+              <label for="name"
+                >Full Name <span aria-label="required">*</span></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+                minlength="2"
+                aria-required="true"
+              />
+            </div>
+
+
+            <div class="required-data">
+              <label for="email"
+                >Email Address <span aria-label="required">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+                aria-required="true"
+                autocomplete="email"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div class="optional-data">
+              <legend>Comment Section</legend>
+              <label for="comments">Comments or Questions</label>
+              <textarea
+                id="comments"
+                name="comments"
+                placeholder="Feel free to ask a question or leave a comment!"
+                rows="4"
+                aria-label="Enter your message here"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="have-nice-day">
+            <legend>Did you have a nice day?</legend>
+            <div role="radiogroup">
+              <div>
+                <input type="radio" id="yes" name="have-nice-day" value="yes" />
+                <label for="yes">Yes</label>
+              </div>
+
+              <div>
+                <input type="radio" id="no" name="have-nice-day" value="no" />
+                <label for="no">No</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="button-container">
+            <button type="submit" aria-label="Submit form">Submit</button>
+            <button type="reset" aria-label="Clear form">Reset</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
