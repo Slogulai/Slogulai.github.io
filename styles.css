@@ -22,42 +22,80 @@ body {
 }
 
 /* Projects.html */
+.project-container {
+  position: relative;
+  top: 100px;
+  bottom: 100px;
+}
 .ai-research-project,
 .rust-web-server {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin: 2rem 0;
+  grid-template-areas: 
+    "header header"
+    "content image"
+    "github image";
   padding: 2rem;
-  align-items: center;
   max-width: 1300px;
-  margin: 2rem auto;
+  padding-top: 150px;
+  margin: 0 auto;
+  align-items: start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.ai-research-project h2,
-.rust-web-server h2 {
-  grid-column: 1 / -1;
-  margin-bottom: 1rem;
+
+.ai-research-project header,
+.rust-web-server header {
+  grid-area: header;
 }
-.ai-research-project img,
-.rust-web-server img {
+
+.ai-research-project > p:first-of-type,
+.rust-web-server > p:first-of-type {
+  grid-area: content;
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  vertical-align: middle;
+}
+
+.ai-research-project > img:not(.github-icon),
+.rust-web-server > img:not(.github-icon) {
+  grid-area: image;
   width: 100%;
   height: auto;
 }
-.ai-research-project img.github-icon,
-.rust-web-server img.github-icon {
+
+.ai-research-project > p:last-of-type,
+.rust-web-server > p:last-of-type {
+  grid-area: github;
+  align-self: end;
+}
+
+.github-icon {
   width: 25px;
   height: 25px;
   vertical-align: middle;
   margin-right: 5px;
 }
-@media screen and (max-width: 768px) {
+
+@media (max-width: 768px) {
   .ai-research-project,
   .rust-web-server {
     grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header"
+      "content"
+      "image"
+      "github";
     gap: 1rem;
     padding: 1rem;
+    padding-top: 100px;
   }
-  
+
+  .ai-research-project > img:not(.github-icon),
+  .rust-web-server > img:not(.github-icon) {
+    width: 100%;
+    margin: 1rem 0;
+  }
 }
 /* Previous-work.html */
 
