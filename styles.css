@@ -369,7 +369,10 @@ body {
   font-weight: bold;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 782px) {
+  .welcome-container {
+    margin: 10px;
+  }
   .welcome-container h1 {
     font-size: 1.5rem;
     justify-content: center;
@@ -543,7 +546,6 @@ body {
     width: 100%;
   }
   .button-container {
-    flex-direction: column;
   }
   .button-container input[type="submit"],
   .button-container input[type="reset"] {

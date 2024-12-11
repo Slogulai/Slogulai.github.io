@@ -1,9 +1,9 @@
 # Chris Sloggetts Journal
 
 This journal reflects the process of development that I took to create this project. I decided
-to break this project down into the physical things that I would be creating and designing and the 
+to break this project down into the physical things that I would be creating and designing. The 
 sections below illustrate my thought process with the project overall and the order at which I completed
-the project. 
+this project. 
 
 ## File Structure
 The begining of this project started with me wanting a clear file structure that I could easily follow. 
@@ -64,7 +64,9 @@ the project organized and my thoughts on what needed to be completed next.
 The home page was my obvious first choice in creating this project since it is where a user will land 
 whenever they come to my website! I decided to use one of our original assignments for this and one 
 of my favorite pictures of myself. The text on the page has changed a couple of times and will change
-beyond this commit for this journal as well. Next, I began working on the navbar.
+beyond this commit for this journal as well. I decided for the home page to briefly talk about my 
+professional experience, rather than using only about for this, since I would have a lot of information
+about my professional experience within previouswork.html. Next, I began working on the navbar.
 
 
 ## Navbar

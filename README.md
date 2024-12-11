@@ -2,28 +2,30 @@
 
 This public repository is for showcasing the html, css and javascript written by
 Christopher Sloggett for CS 463. This code is simple to run as all you need 
-to do is navigate to a web page and enter Slogulai.github.io into the url field. 
+to do is navigate to a below web page and and click away on the website! 
 
+[Slogulai.github.io](https://slogulai.github.io)
 
 ### References
 The below links are my references with a short decription of what I used them for
-throughout the project. 
+throughout the project.  
+ 
 
 
-Navbar examples. I used the 1nd one as its not very different other than the CSS
-https://foolishdeveloper.com/navigation-bar-html-css-javascript/
+Navbar examples. I used the 2nd one as its not overly complex and is stylish  
+[https://foolishdeveloper.com/navigation-bar-html-css-javascript/](https://foolishdeveloper.com/navigation-bar-html-css-javascript/)
 
-Hiding an element in Javascript. Used this on the navbar
-https://www.scaler.com/topics/javascript-hide-element/
+Hiding an element in Javascript. Used this on the navbar to hid the home button  
+[https://www.scaler.com/topics/javascript-hide-element/](https://www.scaler.com/topics/javascript-hide-element/)
 
-Favicon source
-https://www.iconarchive.com/show/fluentui-emoji-4d-icons-by-microsoft/Water-Wave-3d-icon.html
+Favicon source image used on every web page  
+[https://www.iconarchive.com/show/fluentui-emoji-4d-icons-by-microsoft/Water-Wave-3d-icon.html](https://www.iconarchive.com/show/fluentui-emoji-4d-icons-by-microsoft/Water-Wave-3d-icon.html)
 
-responsive image grid that I used as a source
-https://www.w2schools.com/howto/howto_css_image_grid_responsive.asp
+Responsive image grid that I used as a source for about.html  
+[https://www.w2schools.com/howto/howto_css_image_grid_responsive.asp](https://www.w2schools.com/howto/howto_css_image_grid_responsive.asp)
 
-rustacean image source
-https://rustacean.net/more-crabby-things/rustdocs.png
+Rustacean image source  
+[https://rustacean.net/more-crabby-things/rustdocs.png](https://rustacean.net/more-crabby-things/rustdocs.png)
 
-github logo
-https://github.com/logos
+Github logo  
+[https://github.com/logos](https://github.com/logos)
