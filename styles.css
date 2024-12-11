@@ -389,7 +389,7 @@ body {
   }
 }
 
-/* Form */
+/* Contact Form */
 .contact-form-container {
   font-family: "Courier New", Courier, monospace;
   display: flex;
@@ -454,16 +454,16 @@ body {
   display: none;
 }
 
-.have-nice-day {
+.reason-for-contact {
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
-.have-nice-day legend {
+.reason-for-contact legend {
   padding-top: 30px;
   font-size: 1.5rem;
 }
-.have-nice-day input[type="radio"] {
+.reason-for-contact input[type="radio"] {
   appearance: none;
   width: 16px;
   height: 16px;
@@ -474,11 +474,11 @@ body {
   position: relative;
   margin-right: 5px;
 }
-.have-nice-day input[type="radio"]:checked {
+.reason-for-contact input[type="radio"]:checked {
   background-color: white;
   border-color: blue;
 }
-.have-nice-day input[type="radio"]:checked::after {
+.reason-for-contact input[type="radio"]:checked::after {
   content: "";
   position: absolute;
   top: 50%;

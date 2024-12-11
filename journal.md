@@ -111,15 +111,32 @@ as I wanted to answer the question, who am I?
 I had the most fun with about, because who doesnt like to talk about themselves? I decided to hop onto my mac
 and browse through all the photos I had taken picking out the ones I liked the most. Once I had felt good about
 the number of photos, I pushed them all to the repository. I decided for the format of about to be some intro
-text about myself, and a 4 column collage of my adventures over the last couple of years. I staggered the photos
-to be somewhat symmetrical and added a panoramic photo at the bottom for some extra flair. I did some simple optimizing
+text about myself, and a 4 column collage of my adventures over the last couple of years. I figured that both previous work, which hosts my resume, and my home page covered enough in regards to my professional experience so I made the about 
+page more about my outside life rather than my inside life. I staggered the photos
+to be symmetrical and added a panoramic photo at the bottom for some extra flair. I did some simple optimizing
 on this by adding lazy loading to the pictures that arent seen first, and eager loading to the pictures that are seen
 first, since I did notice a little delay on loading depending on what device, or internet connection one had. When 
 viewing this on a phone, all the photos are displayed in a single column for responsiveness. 
 
 
 ## Previous Work
-
+With previous work, I decided to create an entire resume out of html instead of using google api to display a 
+copy of my resume. I made sure to structure it semantically within the html and also to make sure the resume
+looks visibly well on the actual web page through CSS. I also included a download button with a confirmation
+pop up in case someone would want to download a pdf of the resume itself. 
 
 ## Projects
+Projects showcases two of my favorite projects I have worked on while in Computer Science. This web page
+uses grid display within the css since there was a specific way I wanted the pictures and paragraphs to display
+along with the links that are included for the github repositories for these projects. I made sure to source any images 
+that were used within this web page.
+
+## Anecdotes
+There were a lot of really neat things that I found throughout the development of this project. Using Basin for 
+the form submission was a really great thing to find as I didnt want to have a form that didnt do anything. 
+Adding a favicon to each web page was also something that I felt was important, so I found a free wave favicon,
+I am a person of the ocean, and used that on every web page. Using javascript to inject the navbar onto every 
+web page was a fun venture and I am really happy with how it looked. Overall, I am very happy and proud with 
+the cleanliness of my website, the functionality and the responsiveness of everything. This was a greatly fun
+final project!
 
