@@ -2,7 +2,7 @@
 
 This public repository is for showcasing the html, css and javascript written by
 Christopher Sloggett for CS 463. This code is simple to run as all you need 
-to do is navigate to a below web page and and click away on the website! 
+to do is navigate to the below web page and and click away on the website! 
 
 [Slogulai.github.io](https://slogulai.github.io)
 
