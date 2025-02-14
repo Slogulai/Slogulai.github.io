@@ -6,13 +6,13 @@ to do is navigate to the below web page and and click away on the website!
 
 [Slogulai.github.io](https://slogulai.github.io)
 
-### References
-The below links are my references with a short decription of what I used them for
-throughout the project.  
- 
 ### If you want to run this code from live server
 Either fork or clone the repo, once you have it open in VScode right click the index.html file and click the run with liveserver option.  
 This will then open a local session on the most recently used browser.
+
+### References
+The below links are my references with a short decription of what I used them for
+throughout the project.  
 
 Navbar examples. I used the 2nd one as its not overly complex and is stylish  
 [https://foolishdeveloper.com/navigation-bar-html-css-javascript/](https://foolishdeveloper.com/navigation-bar-html-css-javascript/)
