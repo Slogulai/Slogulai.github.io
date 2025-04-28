@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set refresh interval to 5 minutes (in milliseconds)
     const refreshInterval = 5 * 60 * 1000;
     let refreshTimer;
+    let windChart = null; // Store chart instance for updates
     
     // Function to fetch weather data from weather.gov API for Portland Morrison Street Bridge
     async function fetchMorrisonBridgeWeather() {
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const condition = forecast.toLowerCase();
         
         // Map weather conditions to icon filenames that actually exist in the animated folder
+        console.log("Condition: ", condition);
         if (condition.includes('partly sunny') || condition.includes('mostly sunny')) {
             return 'cloudy-day-3'; // Using cloudy-day-3 for partly sunny
         } else if (condition.includes('partly cloudy')) {
@@ -82,6 +84,137 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             return 'weather'; // Using weather.svg as default
         }
+    }
+    
+    // Function to parse wind speed value from string (e.g., "10 mph" -> 10)
+    function parseWindSpeed(windSpeedStr) {
+        if (!windSpeedStr) return null;
+        const match = windSpeedStr.match(/(\d+)/);
+        return match ? parseInt(match[1], 10) : null;
+    }
+    
+    // Function to create and update the wind speed chart
+    function createWindSpeedChart(hourlyData) {
+        // Process hourly data for specific time range (midnight to midnight)
+        const hours = [];
+        const windSpeeds = [];
+        const windGusts = [];
+        
+        // Get current date info
+        const now = new Date();
+        const today = new Date(now);
+        today.setHours(0, 0, 0, 0); // Set to midnight last night
+        
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1); // Set to midnight tonight
+        
+        // Filter periods to include only those between midnight last night and midnight tonight
+        const periods = hourlyData.properties.periods.filter(period => {
+            const periodDate = new Date(period.startTime);
+            return periodDate >= today && periodDate < tomorrow;
+        });
+        
+        // Sort periods by time to ensure proper order
+        periods.sort((a, b) => new Date(a.startTime) - new Date(b.startTime));
+        
+        // Process the data for the chart
+        periods.forEach(period => {
+            // Format time (e.g., "3 PM")
+            const date = new Date(period.startTime);
+            const hour = date.getHours();
+            const formattedHour = hour === 0 ? '12 AM' : 
+                                 hour < 12 ? `${hour} AM` : 
+                                 hour === 12 ? '12 PM' : 
+                                 `${hour - 12} PM`;
+            hours.push(formattedHour);
+            
+            // Parse wind speeds
+            const windSpeed = parseWindSpeed(period.windSpeed);
+            windSpeeds.push(windSpeed);
+            
+            // Parse wind gusts if available, otherwise use estimated values
+            let gustSpeed = null;
+            if (period.windGust) {
+                gustSpeed = parseWindSpeed(period.windGust);
+            } else if (windSpeed) {
+                // Estimate gusts at 1.5x wind speed as a fallback
+                gustSpeed = Math.round(windSpeed * 1.5);
+            }
+            windGusts.push(gustSpeed);
+        });
+        
+        // Destroy previous chart if it exists
+        if (windChart) {
+            windChart.destroy();
+        }
+        
+        // Get the canvas element
+        const ctx = document.getElementById('wind-chart');
+        
+        // Create new chart with updated title to reflect the time range
+        windChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: hours,
+                datasets: [
+                    {
+                        label: 'Wind Speed (mph)',
+                        data: windSpeeds,
+                        borderColor: 'rgba(65, 105, 225, 1)',
+                        backgroundColor: 'rgba(65, 105, 225, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: false
+                    },
+                    {
+                        label: 'Wind Gusts (mph)',
+                        data: windGusts,
+                        borderColor: 'rgba(220, 20, 60, 0.8)',
+                        backgroundColor: 'rgba(220, 20, 60, 0.1)',
+                        borderWidth: 1,
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Today\'s Wind Forecast (Now to Midnight)',
+                        font: {
+                            size: 16,
+                            family: '"Courier New", Courier, monospace'
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Wind Speed (mph)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Time'
+                        }
+                    }
+                }
+            }
+        });
     }
     
     // Function to display weather data
@@ -167,8 +300,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="forecast-time">Last updated: ${refreshTime}</p>
                     <p class="auto-refresh">Auto-refreshes every 5 minutes</p>
                 </div>
+                
+                <!-- Wind Chart Section -->
+                <div class="wind-chart-container">
+                    <canvas id="wind-chart"></canvas>
+                </div>
             </div>
         `;
+        
+        // Create the wind speed chart after the DOM has been updated
+        setTimeout(() => {
+            createWindSpeedChart(hourlyData);
+        }, 100);
     }
     
     // Function to initialize weather and set up auto-refresh
